@@ -1,14 +1,28 @@
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+*
+{
+    font-family: 'Roboto';
+}
+
 body
 {
     display: flex;
     margin: 0;
+    
 }
 
 #dashboard
 {
     flex:1;
-    background-color: rgb(11, 52, 141);
+    background-color: #38bdf8;
     height: 100vh;
+    
+    
 }
 
 #main
@@ -16,6 +30,11 @@ body
     flex:4;
     display: flex;
     flex-direction: column;
+}
+
+#main > *
+{
+    padding-left: 4vw;
 }
 
 nav
@@ -30,28 +49,263 @@ a
     color:white;
 }
 
+nav > *
+{
+    padding-left: 8%;
+}
+
 .nav-link
 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5%;
+    font-size: 18px;
 }
 
 #main-bottom
 {
-    background-color: gray;
+    background-color: #e4e4e7;
     flex: 4;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    
 }
 
 #main-top
 {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects
 {
     display: grid;
-    grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 100px;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
     gap: 10%;
+}
+
+.project
+{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    flex-direction: column;
+    border: 3px solid black;
+    border-left: 1em solid orange;
+    border-radius: 5%/5%;
+    text-align: center;
+    font-size: 20px;
+}
+
+input
+{
+    width: 50%;
+    height: 17%;
+    background-color: rgb(212, 208, 208);
+    border-radius: 2%/30%;
+    border:none;
+    font-size: 20px;
+}
+
+#search
+{
+    border: none;
+    height:15%;
+    aspect-ratio: 1/1;
+    background: url("./magnify.svg");
+    margin-right: 1%;
+}
+
+#search, input, #notifications, #profile-picture, #profile-name
+{
+    margin-top: 2%;
+}
+
+
+#search, input, #notifications, #profile-name
+{
+    height: 35%;
+}
+
+#notifications,#profile-picture
+{
+    margin-right: 2%;
+}
+
+
+#notifications
+{
+    background:url("./bell.svg");
+    border: none;
+    aspect-ratio: 1/1;
+    margin-left: 20%;
+}
+
+#profile-picture
+{
+    height: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 3px solid gray;
+    background: url('./cat.jpeg');
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+}
+.trending-profile > button
+{
+    height: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    border: 3px solid gray;
+    background-size: contain;
+
+    margin-right: 5%;
+}
+input:focus
+{
+    outline: none;
+}
+
+#main-top-top
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+#main-top-bottom
+{
+    display: flex;
+    flex: 1;
+    align-items: center ;
+}
+
+#profile-name
+{
+    margin-left: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.project:hover
+{
+    cursor: pointer;
+}
+
+
+.project > img
+{
+    flex:1;
+    overflow: hidden;
+}
+
+#logo
+{
+    font-size: 24px;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+#logo:hover
+{
+    cursor:pointer;
+}
+
+a > img 
+{
+    max-width: 10%;
+    flex: 1;
+    margin-right: 5%;
+    filter: invert();
+
+}
+
+
+#logo > img
+{
+    max-width: 15%;
+    filter: invert();
+    margin-right: 3%;
+}
+
+
+a
+{
+    display: flex;
+}
+
+a > p
+{
+   flex: 4;
+   width: 50%;
+}
+
+#main-top-bottom > button
+{
+    width:10%;
+    height:40%;
+    background-color: #38bdf8;
+    border: none;
+    border-radius: 20%/80%;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-right: 3%;
+}
+
+#main-top-bottom > button:hover
+{
+    cursor: pointer;
+}
+
+#greeting
+{
+    font-size: 25px;
+    margin-right: 50%;
+}
+
+.nav-link:hover
+{
+    background-color: #0ea5e9;
+}
+
+
+.trending-profile
+{
+    width: 80%;
+    background-color: white;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#trending
+{   
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4%/3%;
+    right: 4vw;
+    top: 3vh;
+    position: relative;
+    
+}
+
+
+.name
+{
+    color: grey;
+    margin:0;
 }

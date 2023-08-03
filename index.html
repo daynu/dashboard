@@ -8,32 +8,127 @@
 </head>
 <body>
     <div id="dashboard">
-        <div id = "logo">Dashboard</div>
+        <div onclick="window.open('#')" id = "logo">
+            <img src="./icons/view-dashboard.svg" alt="logo">
+            Dashboard</div>
         <nav>
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Profile</a>
-            <a class="nav-link" href="#">Messages</a>
-            <a class="nav-link" href="#">History</a>
-            <a class="nav-link" href="#">Tasks</a>
-            <a class="nav-link" href="#">Communities</a>
-            <a class="nav-link" href="#">Settings</a>
-            <a class="nav-link" href="#">Support</a>
-            <a class="nav-link" href="#">Privacy</a>
+            <a class="nav-link" href="#">
+                <img src="./icons/home-account.svg" alt="home">
+                <h4>Home</h4></a>
+            <a class="nav-link" href="#">
+                <img src="./icons/card-account-details-outline.svg" alt="profile">
+                <h4>Profile</h4></a>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="./icons/message-fast-outline.svg" alt="messages">
+                <h4>Messages</h4></a>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="./icons/history.svg" alt="history">
+                <h4>History</h4></a>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="./icons/calendar-check.svg" alt="tasks">
+                <h4>Tasks</h4></a>
+            </a>
+            <a class="nav-link" style="margin-bottom: 10%" href="#">
+                <img src="./icons/account-group.svg" alt="communities">
+                <h4>Communities</h4></a></a>
+            <a class="nav-link" href="#">
+                <img src="./icons/cog.svg" alt=settings">
+                <h4>Settings</h4></a>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="./icons/face-agent.svg" alt="support">
+                <h4>Support</h4></a>
+            </a>
+            <a class="nav-link" href="#">
+                <img src="./icons/security.svg" alt="privacy">
+                <h4>Privacy</h4></a>
+            </a>
         </nav>
     </div>
     <div id = "main">
         <div id = "main-top">
-            <input type="text">
-        </div>
-        <div id = "main-bottom">
-            Your Projects
-            <div id = "projects">
-                <div class="project">Etch-a-sketch</div>
-                <div class="project">Calculator</div>
-                <div class="project">Form</div>
+            <div id="main-top-top">
+                <button id="search"></button>
+                <input type="text">
+                <button id="notifications"></button>
+                <div id="profile-picture"></div>
+                <div id="profile-name">Daynuu</div>
+            </div>
+            <div id="main-top-bottom">
+                <div id="greeting">Hi There!</div>
+                <button id = "new">New</button>
+                <button id = "upload">Upload</button>
+                <button id = "share">Share</button>
             </div>
         </div>
-        
+        <div id = "main-bottom">
+            <div style="flex:3">
+                <h2>Your Projects</h2>
+                <div id = "projects">
+                    
+                    <div onclick="window.open('https://daynu.github.io/etch-a-sketch', '_blank')" id = "etch" class="project">Etch-a-sketch
+                        <img src="./etch.png" alt="etch">
+                    </div>
+                    <div onclick="window.open('https://daynu.github.io/calculator', '_blank')" id = "calc" class="project">Calculator
+                        <img src="./calc.png" alt="calc">
+                    </div>
+                    <div onclick="window.open('https://daynu.github.io/form', '_blank')" id = "form"class="project">Form Demo
+                        <img src="./form.png" alt="form">
+                    </div>
+                    <div onclick="window.open('https://daynu.github.io/odin-recipes', '_blank')" id = "etch" class="project">Webpage Demo
+                        <img src="./webpage.png" alt="etch">
+                    </div>
+                </div>
+            </div>
+            
+            <div style="flex:1; display: flex; flex-direction: column;">
+                <h2>Trending</h2>
+                <div id="trending">
+                    <div class="trending-profile">
+                        <button style="background: url('./5.jpeg'); background-size:contain; 
+                        background-repeat: no-repeat; background-position: center; background-size: 150%;"></button>
+                        <div>
+                            <p style="margin: 0;">@joebek</p>
+                            <p class="name">Joe Beckham</p>
+                        </div>
+                    </div>
+                    <div class="trending-profile">
+                        <button style="background: url('./4.jpeg');background-size:contain; 
+                        background-repeat: no-repeat; background-position: center; background-size: 150%;"></button>
+                        <div>
+                            <p style="margin: 0;">@garyv</p>
+                            <p class="name">Gary Vincent</p>
+                        </div>
+                    </div>
+                    <div class="trending-profile">
+                        <button style="background: url('./3.jpg');background-size:contain;
+                         background-repeat: no-repeat; background-position: center; background-size: 150%;"></button>
+                        <div>
+                            <p style="margin: 0;">@ellasay</p>
+                            <p class="name">Ella Ramsay</p>
+                        </div>    
+                    </div>
+                    <div class="trending-profile">
+                        <button style="background: url('./2.jpg');background-size:contain; 
+                        background-repeat: no-repeat; background-position: center; background-size: 150%;"></button>
+                        <div>
+                            <p style="margin: 0;">@huberking</p>
+                            <p class="name">Kingsley Hubert</p>
+                        </div>   
+                    </div>
+                    <div class="trending-profile">
+                        <button style="background: url('./1.png');background-size:contain;
+                         background-repeat: no-repeat; background-position: center; background-size: 150%;"></button>
+                        <div>
+                            <p style="margin: 0;">@mingle</p> 
+                            <p class="name">Xi Ming</p>
+                        </div>   
+                    </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
